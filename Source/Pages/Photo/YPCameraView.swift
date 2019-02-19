@@ -90,9 +90,11 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
         overlayView?.followEdges(previewViewContainer)
 
         |-(15+sideMargin)-flashButton.size(42)
+        flashButton.followEdges(previewViewContainer)
 //        flashButton.Bottom == previewViewContainer.Bottom - 15
 
         flipButton.size(42)-(15+sideMargin)-|
+        flipButton.followEdges(previewViewContainer)
 //        flipButton.Bottom == previewViewContainer.Bottom - 15
         
         timeElapsedLabel-(15+sideMargin)-|
