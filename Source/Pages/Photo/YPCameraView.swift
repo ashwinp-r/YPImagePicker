@@ -77,16 +77,13 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
                 |-sideMargin-previewViewContainer-sideMargin-|,
                 -2,
                 |progressBar|,
-                0,
-                |buttonsContainer|,
                 0
             )
             previewViewContainer.fillContainer()
-            self.bringSubviewToFront(buttonsContainer)
             
-//            buttonsContainer.fillHorizontally()
-//            buttonsContainer.height(100)
-//            buttonsContainer.Bottom == previewViewContainer.Bottom - 15
+            buttonsContainer.fillHorizontally()
+            buttonsContainer.height(100)
+            buttonsContainer.Bottom == previewViewContainer.Bottom - 15
         }
 		// Ashwin_Patch_End
 
@@ -120,5 +117,7 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
         flashButton.setImage(YPConfig.icons.flashOffIcon, for: .normal)
         flipButton.setImage(YPConfig.icons.loopIcon, for: .normal)
         shotButton.setImage(YPConfig.icons.capturePhotoImage, for: .normal)
+        self.bringSubviewToFront(flashButton)
+        self.bringSubviewToFront(flipButton)
     }
 }
