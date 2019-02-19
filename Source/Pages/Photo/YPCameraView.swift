@@ -82,6 +82,7 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
                 0
             )
             previewViewContainer.fillContainer()
+            self.bringSubviewToFront(buttonsContainer)
             
 //            buttonsContainer.fillHorizontally()
 //            buttonsContainer.height(100)
