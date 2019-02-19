@@ -33,6 +33,8 @@ public class YPCameraVC: UIViewController, UIGestureRecognizerDelegate, YPPermis
         v.flashButton.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
         v.shotButton.addTarget(self, action: #selector(shotButtonTapped), for: .touchUpInside)
         v.flipButton.addTarget(self, action: #selector(flipButtonTapped), for: .touchUpInside)
+        self.v.bringSubviewToFront(v.flashButton)
+        self.v.bringSubviewToFront(v.flipButton)
         
         // Focus
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.focusTapped(_:)))
