@@ -79,7 +79,7 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
                 |progressBar|,
                 0
             )
-            previewViewContainer.fillContainer(20)
+            previewViewContainer.fillContainer(200)
             
 //            buttonsContainer.fillHorizontally()
             buttonsContainer.height(100)
