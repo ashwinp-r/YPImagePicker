@@ -60,7 +60,7 @@ public class YPImagePicker: UINavigationController {
         }
         viewControllers = [picker]
         setupLoadingView()
-        navigationBar.isTranslucent = false
+        navigationBar.isTranslucent = true
 
         picker.didSelectItems = { [weak self] items in
             let showsFilters = YPConfig.showsFilters
