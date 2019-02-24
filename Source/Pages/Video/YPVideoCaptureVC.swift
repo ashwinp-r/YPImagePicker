@@ -43,6 +43,8 @@ public class YPVideoCaptureVC: UIViewController, YPPermissionCheckable {
         super.viewDidLoad()
         v.timeElapsedLabel.isHidden = false // Show the time elapsed label since we're in the video screen.
         setupButtons()
+        v.bringSubviewToFront(v.flipButton)
+        v.bringSubviewToFront(v.flashButton)
         linkButtons()
         
         // Focus
@@ -61,6 +63,8 @@ public class YPVideoCaptureVC: UIViewController, YPPermissionCheckable {
                                     completion: {
                                         DispatchQueue.main.async {
                                             self?.v.shotButton.isEnabled = true
+                                            self?.v.flipButton.isEnabled = true
+                                            self?.v.flashButton.isEnabled = true
                                             self?.refreshState()
                                         }
             })
@@ -79,6 +83,8 @@ public class YPVideoCaptureVC: UIViewController, YPPermissionCheckable {
     
     private func setupButtons() {
         v.flashButton.setImage(YPConfig.icons.flashOffIcon, for: .normal)
+        v.superview?.bringSubviewToFront(v.flipButton)
+        v.superview?.bringSubviewToFront(v.flashButton)
         v.flipButton.setImage(YPConfig.icons.loopIcon, for: .normal)
         v.shotButton.setImage(YPConfig.icons.captureVideoImage, for: .normal)
     }
